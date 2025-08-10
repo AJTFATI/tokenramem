@@ -24,7 +24,7 @@ export const config: SiteConfig = {
     name: "Alexander J. Taylor",
     bio: "Creative. Mello Yello Enthusiast.",
 
-    avatar: "\Screenshot 2025-07-23 123852.png"
+    avatar: "/Screenshot 2025-07-23 123852.png"
   },
   social: {
     instagram: "https://instagram.com/alexanderjordantaylor",
