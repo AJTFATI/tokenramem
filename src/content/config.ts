@@ -9,7 +9,7 @@ const blog = defineCollection({
     excerpt: z.string().optional(),
     categories: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
-    author: z.string().default('Anonymous'),
+    author: z.string().default('Alexander J. Taylor'),
     image: z.string().optional(),
   }),
 });

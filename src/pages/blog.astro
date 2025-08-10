@@ -1,5 +1,5 @@
 ---
-import Layout from '../components/Layout.astro';
+import Layout from '../components/Layout.astro';n
 const base = import.meta.env.BASE_URL;
 
 const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
@@ -10,12 +10,12 @@ const sortedPosts = allPosts
   .sort((a: any, b: any) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
-<Layout title="Blog | Volks-Typo" description="All blog posts from the Volks-Typo theme">
+<Layout title="Blog | Alexander J. Taylor" description="All blog posts from Alexander J. Taylor">
   <div class="blog-page">
     <header class="blog-header">
       <h1 class="blog-title">Blog</h1>
       <p class="blog-description">
-        Exploring design, typography, and the intersection of historical aesthetics with modern functionality.
+        From sports to epic fantasy, explore my mind..
       </p>
       <hr class="blog-rule" />
     </header>
