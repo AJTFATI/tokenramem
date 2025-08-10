@@ -1,16 +1,22 @@
 ---
 import { config } from '../config';
+import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
 
-const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
-const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
-const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)] as any[];
-const recentPosts = allPosts
-  .sort((a: any, b: any) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
-  .slice(0, 5);
+let recentPosts: any[] = [];
+let categories: string[] = [];
 
-const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.categories || []))];
+try {
+  const allPosts = await getCollection('blog');
+  recentPosts = allPosts
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+    .slice(0, 5);
+  
+  categories = [...new Set(allPosts.flatMap(post => post.data.categories || []))];
+} catch (error) {
+  console.error('Error loading blog posts for sidebar:', error);
+}
 ---
 
 <div class="sidebar-content">
@@ -51,11 +57,11 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
       <ul class="post-list">
         {recentPosts.map(post => (
           <li class="post-item">
-            <a href={`${base}/blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}`} class="post-link">
-              {post.frontmatter.title}
+            <a href={`${base}blog/${post.slug}`} class="post-link">
+              {post.data.title}
             </a>
-            <time class="post-date" datetime={post.frontmatter.date}>
-              {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+            <time class="post-date" datetime={post.data.date}>
+              {new Date(post.data.date).toLocaleDateString('en-US', {
                 month: 'short',
                 day: 'numeric',
                 year: 'numeric'
