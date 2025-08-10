@@ -2,86 +2,70 @@
 title: "Future Over Past, Why FAU Basketball Will Succeed"
 date: "2025-06-06"
 description: "The Cinderella Run was fun. John Jakus & his team are here to write a new chapter."
-excerpt: "CSS Grid isn't just a layout tool—it's a design philosophy made manifest in code. Learn how to create modernist-inspired layouts that would make Mondrian proud."
-categories: ["Web Development", "Design", "CSS"]
-tags: ["CSS Grid", "Layout", "Modernism", "Frontend"]
+excerpt: "The Cinderella Run was fun. John Jakus & his team are here to write a new chapter."
+categories: ["FAUMBB", "JohnJakus", "CollegeBBall"]
+tags: ["FAU", "Layout", "Modernism", "Frontend"]
 ---
 
-# Building Modernist Layouts with CSS Grid
+# Florida Atlantic men’s basketball, better known as the Beach Boys, changed the university in ways no one expected.
 
-The modernist designers of the early 20th century worked with rulers, T-squares, and careful mathematical calculations. Today, we have CSS Grid—a tool that would have seemed like magic to the Bauhaus masters, yet one that perfectly embodies their systematic approach to design.
 
-## The Grid as Design Philosophy
+By now, everybody knows the story. 35 wins, Conference USA championship, and improbable win after improbable win until they fell in the final shot against the San Diego State Aztecs.
 
-Before we write a single line of code, let's understand why the grid matters. In modernist design, the grid isn't just a tool—it's a worldview. It represents:
+Dusty May and his roster will always be legends to the Florida Atlantic community and a testament to the magic of March Madness.
 
-- **Order over chaos**
-- **Systematic thinking over intuition**
-- **Democratic design over hierarchical layouts**
-- **Mathematical precision over approximation**
+Reminiscing is fun, and I will always look at the Final Four as the event that changed my university 1.8 miles from the beach into a household name.
 
-CSS Grid gives us the power to implement these principles directly in our code.
 
-## Setting Up a Modernist Grid System
+## It’s time to turn the page.
 
-Let's start with a basic 8-point grid system, a favorite of contemporary designers that traces its roots back to constructivist principles:
+To put it into perspective, Nick Boyd’s university-altering layup was 18 months ago.
 
-```css
-:root {
-  --grid-unit: 8px;
-  --grid-2: calc(var(--grid-unit) * 2);   /* 16px */
-  --grid-3: calc(var(--grid-unit) * 3);   /* 24px */
-  --grid-4: calc(var(--grid-unit) * 4);   /* 32px */
-  --grid-6: calc(var(--grid-unit) * 6);   /* 48px */
-  --grid-8: calc(var(--grid-unit) * 8);   /* 64px */
-  --grid-12: calc(var(--grid-unit) * 12); /* 96px */
-}
-```
+Nelly’s iconic interview, Vlad’s rimrocking dunks, and A-Mart’s 3-point celebrations are all exhibits of the past.
 
-This system ensures that every spacing decision is intentional and harmonious. No more arbitrary margins or magic numbers.
+Even the players themselves have left.
 
-## A Bauhaus-Inspired Layout
+Einstein had a quote that all sports fans should remember:
 
-Let's create a layout that would feel at home in a 1920s Bauhaus publication:
+> “‘I’m more interested in the future than the past because the future is where I intend to live.” 
 
-```css
-.bauhaus-layout {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  gap: var(--grid-3);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--grid-4);
-}
+# Enter Coach John Jakus, a proven winner.
 
-.header {
-  grid-column: 1 / -1;
-  background: #c13127; /* Bauhaus red */
-  color: white;
-  padding: var(--grid-8) var(--grid-4);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
 
-.sidebar {
-  grid-column: 1 / 4;
-  background: #f0e9d6;
-  padding: var(--grid-4);
-}
+## "Relationships over Everything"
 
-.main-content {
-  grid-column: 4 / 10;
-  background: white;
-  padding: var(--grid-6);
-}
+oach Jakus’s track record speaks for itself. Jakus was the associate head coach for the Baylor Bears basketball squad. He helped the roster capture a national championship and back-to-back conference titles during that time. Along with his winning tendencies, he also has helped develop 3 1st round NBA draft picks. Jeremy Sochan, Davion Mitchell, and now Keyonte George are all playing the highest level of basketball in the world.
 
-.accent-block {
-  grid-column: 10 / -1;
-  background: #e8a100; /* Bauhaus yellow */
-  padding: var(--grid-4);
-}
-```
+Jakus does not just have success to prove his greatness; he has legends of the game vouching for him. His former coach, Gonzaga head coach Mark Few, emphasized his commitment to the game and his players. Gonzaga is the blueprint of what midmajor schools strive to be: the Bulldogs were a relatively small school until their basketball program’s success catapulted it into the national spotlight.
+
+NBA champion coach Joe Mazzulla always praised Jakus not just for his basketball expertise but also for his appreciation for the humanity of his players. Jakus has a formula for winning: relationships over everything.
+
+You can learn all the technical aspects of basketball and all the strategies, but if you cannot relate to the person holding the basketball, you will not be a good coach.
+
+## The Fellas
+According to fluentslang.com, “the term fella is a shortened version of “fellow person” and is commonly used to refer to a friend or any random person.”
+
+Even though these athletes are all-conference players of the year or even scouted by NBA teams, at the core, they are people. Given Coach Jakus’ ideology that relationships are everything, the 2024-2025 class will be defined as such. 
+
+It seems like the coaching staff listens to Pitbull because the roster contains more international players than the average D1 team.
+
+ According to the NCAA, just over 85 percent of DI men’s basketball players have a listed hometown in one of the 50 U.S. states, plus Washington D.C., which means DI teams have an average of nearly 2.3 international players per school. (Wittry, 2022).
+
+ 
+
+A Google maps picture showing the hometowns of all Florida Atlantic men's basketball players 2023-2024
+According to the Florida Atlantic’s roster, they have 7 international players. Jakus has assembled a roster with more than triple the amount of international players than the average university. International play has boomed recently, with the NBA dominated by foreigners (see Jokic, Giannis, Luka).
+
+A few of Jakus’ recruits have played international hoop on the biggest stage.
+
+ Both big men have played basketball for Lithuania. Matas Vokietaitis and Mantas Kocanas both represented their country in overseas tournaments. Considering their similarities; seeing how Jakus incorporates them into the roster will be very interesting.
+
+Senegal native Amar Amkou played basketball for the  NBA’s African Academy. He impressed so much that he even won Rookie of the Year in his program.
+
+Coach Jakus has ties overseas, which played a factor in recruiting these individuals.
+
+Jakus has recruited talent that is based on his guard-heavy playstyle. Picking up the SWAC player of the year in Ken Evans Jr while adding all-conference players in Leland Walker and KyKy Tandy indicates that Jakus will promote a small ball-esque offense. 
+
 
 ## Asymmetrical Balance: The Mondrian Grid
 
