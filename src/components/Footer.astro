@@ -10,10 +10,8 @@ const currentYear = new Date().getFullYear();
       <p class="copyright">
         © {currentYear} {config.author.name}. All rights reserved.
       </p>
-      <p class="theme-credit">
-        Alexander J. Taylor <a href="https://astro.build" target="_blank" rel="noopener"></a> 
-        • <a href="https://github.com/yourusername/volks-typo" target="_blank" rel="noopener">Volks-Typo Theme</a>
-      </p>
+      
+
     </div>
     
     <div class="social-links">
@@ -69,17 +67,7 @@ const currentYear = new Date().getFullYear();
     gap: calc(var(--grid-unit) / 2);
   }
 
-  .copyright,
-  .theme-credit {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-  }
-
-  .theme-credit a {
-    color: var(--color-accent);
-    font-weight: 500;
-  }
+  
 
   .theme-credit a:hover,
   .theme-credit a:focus {

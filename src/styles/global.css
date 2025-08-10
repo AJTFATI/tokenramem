@@ -185,6 +185,7 @@ img {
   height: auto;
   border: 1px solid var(--color-border);
   margin: calc(var(--grid-unit) * 2) 0;
+  
 }
 
 figcaption {

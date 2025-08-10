@@ -22,9 +22,9 @@ export const config: SiteConfig = {
   description: "The digital diary of Alexander J. Taylor",
   author: {
     name: "Alexander J. Taylor",
-    bio: "Creative technologist.",
+    bio: "Creative. Mello Yello Enthusiast.",
 
-    avatar: "/images/headshot.png"
+    avatar: "\Screenshot 2025-07-23 123852.png"
   },
   social: {
     instagram: "https://instagram.com/alexanderjordantaylor",
