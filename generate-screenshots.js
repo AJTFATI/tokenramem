@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { chromium } from 'playwright';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -12,7 +13,7 @@ async function generateScreenshots() {
   // Base URL - GitHub Pages live site
   const baseURL = 'https://jdrhyne.github.io/volks-typo';
   
-  console.log('🎨 Generating Volks-Typo theme screenshots for submission...\n');
+  // console.log('🎨 Generating Volks-Typo theme screenshots for submission...\n');
   
   // Desktop screenshots (1200px width for high quality)
   const desktopPage = await context.newPage();
@@ -37,7 +38,7 @@ async function generateScreenshots() {
   });
   
   // 3. Individual Blog Post
-  console.log('📸 Capturing individual blog post...');
+  
   await desktopPage.goto(`${baseURL}/blog/bauhaus-design-principles/`);
   await desktopPage.waitForLoadState('networkidle');
   await desktopPage.screenshot({ 

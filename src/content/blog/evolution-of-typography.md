@@ -3,7 +3,7 @@ title: "How To Avenge the Worst Home Loss Since 2018"
 date: "2025-06-05"
 description: "How the Owls can bounce back."
 excerpt: "Typography has evolved from hand-carved letters to algorithmic type design. This journey reveals how technological advances have democratized the written word."
-categories: ["Typography", "History", "Design"]
+categories: ["College", "Basketball", "faumbb"]
 tags: ["Fonts", "Type Design", "History", "Web Typography"]
 ---
 
