@@ -1,11 +1,11 @@
 ---
 import Layout from '../components/Layout.astro';
-const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
-const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
+import { getCollection } from 'astro:content';
 
-const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)] as any[];
+// Get all blog posts using Astro's content collections
+const allPosts = await getCollection('blog');
 const sortedPosts = allPosts
-  .sort((a: any, b: any) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
   .slice(0, 3);
 ---
 
@@ -41,12 +41,12 @@ const sortedPosts = allPosts
             {sortedPosts.map(post => (
               <article class="demo-post-card">
                 <h3 class="demo-post-title">
-                  <a href={post.url}>{post.frontmatter.title}</a>
+                  <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`}>{post.data.title}</a>
                 </h3>
                 
                 <div class="demo-post-meta">
-                  <time class="demo-post-date" datetime={post.frontmatter.date}>
-                    {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                  <time class="demo-post-date" datetime={post.data.date.toISOString()}>
+                    {new Date(post.data.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
@@ -55,13 +55,13 @@ const sortedPosts = allPosts
                   <span class="demo-post-reading-time">5 min read</span>
                 </div>
                 
-                {post.frontmatter.excerpt && (
-                  <p class="demo-post-excerpt">{post.frontmatter.excerpt}</p>
+                {post.data.excerpt && (
+                  <p class="demo-post-excerpt">{post.data.excerpt}</p>
                 )}
                 
-                {post.frontmatter.categories && (
+                {post.data.categories && (
                   <div class="demo-post-categories">
-                    {post.frontmatter.categories.map((category: string) => (
+                    {post.data.categories.map((category: string) => (
                       <span class="demo-category">{category}</span>
                     ))}
                   </div>
@@ -122,52 +122,54 @@ const sortedPosts = allPosts
           <div class="type-sample">
             <h3 class="sample-h3">Social Media Coordinator</h3>
             <p class="type-meta">Aletto Jewelers • Apr-Jul 2025 • Boca Raton, FL</p>
-              <p class="sample-body">        <ul class="list-disc pl-6 mt-2 space-y-1">
-          <li>   Generated 1.3M+ views in under 90 days through short-form video content and social media campaigns.</li>
-          <li>   Managed daily content calendar across Instagram and TikTok, ensuring brand consistency and message alignment.</li>
-          <li>   Collaborated directly with leadership to drive retail traffic and improve content ROI.</li>
-        </ul>
-            </p>
+            <div class="sample-body">
+              <ul class="list-disc pl-6 mt-2 space-y-1">
+                <li>Generated 1.3M+ views in under 90 days through short-form video content and social media campaigns.</li>
+                <li>Managed daily content calendar across Instagram and TikTok, ensuring brand consistency and message alignment.</li>
+                <li>Collaborated directly with leadership to drive retail traffic and improve content ROI.</li>
+              </ul>
+            </div>
           </div>
-                  <div class="typography-samples">
+          
           <div class="type-sample">
             <h3 class="sample-h3">Barista</h3>
-            <p class="type-meta">Starbucks • May 2022-Jul 2025 • Boca Raton, FL
-               <p class="sample-body">        <ul class="list-disc pl-6 mt-2 space-y-1">
-          <li>   Maintains composure and professionalism in a high-volume, fast-paced retail environment.</li>
-          <li>   Demonstrates  problem-solving and adaptability to address shortages, labor constraints, and shifting priorities.</li>
-          <li>   Prioritizes speed, accuracy, and customer satisfaction, reducing wait times and improving overall store flow.</li>
-        </ul>
-            </p>
+            <p class="type-meta">Starbucks • May 2022-Jul 2025 • Boca Raton, FL</p>
+            <div class="sample-body">
+              <ul class="list-disc pl-6 mt-2 space-y-1">
+                <li>Maintains composure and professionalism in a high-volume, fast-paced retail environment.</li>
+                <li>Demonstrates problem-solving and adaptability to address shortages, labor constraints, and shifting priorities.</li>
+                <li>Prioritizes speed, accuracy, and customer satisfaction, reducing wait times and improving overall store flow.</li>
+              </ul>
+            </div>
           </div>
-  </p>
-          </div>
-                  <div class="typography-samples">
+          
           <div class="type-sample">
             <h3 class="sample-h3">PR Director</h3>
-            <p class="type-meta">Public Relations Student Society at FAU • Jan- May 2025 • Boca Raton, FL
-               <p class="sample-body">        <ul class="list-disc pl-6 mt-2 space-y-1">
-          <li>   Generated 5,367 views in 60 days on Social Media.</li>
-          <li>   Managed a team of three for social media strategies.</li>
-          <li>   Led general body meetings along with the President and Vice President.</li>
-        </ul>
-            </p>
+            <p class="type-meta">Public Relations Student Society at FAU • Jan- May 2025 • Boca Raton, FL</p>
+            <div class="sample-body">
+              <ul class="list-disc pl-6 mt-2 space-y-1">
+                <li>Generated 5,367 views in 60 days on Social Media.</li>
+                <li>Managed a team of three for social media strategies.</li>
+                <li>Led general body meetings along with the President and Vice President.</li>
+              </ul>
+            </div>
           </div>
-               <div class="typography-samples">
+          
           <div class="type-sample">
             <h3 class="sample-h3">Ambassador</h3>
             <p class="type-meta">Florida Atlantic Student Alumni Association • Sept 2021-May 2025 • Boca Raton, FL</p>
-            <p class="sample-body">
+            <div class="sample-body">
               <ul class="list-disc pl-6 mt-2 space-y-1">
                 <li>Organized events for Florida Atlantic sports by ushering in patrons.</li>
                 <li>Instructed the student section on game day material.</li>
                 <li>Promoted and advocated for the SAA membership by tabling at FAU.</li>
               </ul>
-            </p>
+            </div>
+          </div>
+        </div>
       </div>
-          
-    
-
+    </section>
+  </div>
 </Layout>
 
 <style>
