@@ -9,7 +9,7 @@ export async function GET(context) {
       title: post.frontmatter.title,
       pubDate: post.frontmatter.date,
       description: post.frontmatter.excerpt || post.frontmatter.description,
-      link: `/blog/${slug}/`,
+      link: `/${slug}/`,
     };
   });
   

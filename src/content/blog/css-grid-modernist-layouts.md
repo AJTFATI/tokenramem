@@ -1,7 +1,7 @@
 ---
-title: "Future Over Past, How FAU Basketball Will Win*"
+title: "Future Over Past, Why FAU Basketball Will Succeed"
 date: "2025-06-06"
-description: "How CSS Grid enables us to create layouts inspired by Bauhaus and constructivist design"
+description: "The Cinderella Run was fun. John Jakus & his team are here to write a new chapter."
 excerpt: "CSS Grid isn't just a layout tool—it's a design philosophy made manifest in code. Learn how to create modernist-inspired layouts that would make Mondrian proud."
 categories: ["Web Development", "Design", "CSS"]
 tags: ["CSS Grid", "Layout", "Modernism", "Frontend"]

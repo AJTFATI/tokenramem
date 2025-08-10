@@ -1,8 +1,8 @@
 ---
-import Layout from '../../components/Layout.astro';
-import TableOfContents from '../../components/TableOfContents.astro';
-import { extractHeadings, filterHeadingsForTOC } from '../../utils/table-of-contents';
-import { calculateReadingTime, extractTextFromMarkdown } from '../../utils/reading-time';
+import Layout from '../components/Layout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import { extractHeadings, filterHeadingsForTOC } from '../utils/table-of-contents';
+import { calculateReadingTime, extractTextFromMarkdown } from '../utils/reading-time';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -56,7 +56,7 @@ const publishedTime = post.data.date ? new Date(post.data.date).toISOString() : 
         {post.data.categories && post.data.categories.length > 0 && (
           <div class="post-categories">
             {post.data.categories.map((category: string) => (
-              <a href={`${base}/categories/${category.toLowerCase()}`} class="category-tag">
+              <a href={`${base}categories/${category.toLowerCase()}`} class="category-tag">
                 {category}
               </a>
             ))}
@@ -91,7 +91,7 @@ const publishedTime = post.data.date ? new Date(post.data.date).toISOString() : 
       )}
       
       <div class="post-navigation">
-        <a href={`${base}/blog`} class="back-to-blog">← Back to Blog</a>
+        <a href={`${base}blog`} class="back-to-blog">← Back to Blog</a>
       </div>
     </footer>
   </article>
