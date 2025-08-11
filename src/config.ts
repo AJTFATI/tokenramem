@@ -18,8 +18,8 @@ export interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-  title: "Headlines, Hootsuite, & Hoops.",
-  description: "The digital diary of Alexander J. Taylor",
+  title: "The Digital Diary of Alexander J. Taylor",
+  description: "Welcome to my corner of the internet.",
   author: {
     name: "Alexander J. Taylor",
     bio: "Creative. Poutine Enthusiast.",
