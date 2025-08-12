@@ -1,12 +1,14 @@
 export async function GET() {
-  // Get all blog posts
-  const posts = await import.meta.glob('../content/blog/*.md');
+  // Get all blog posts (both .md and .mdx files)
+  const posts = await import.meta.glob('../content/blog/*.{md,mdx}');
   
   const searchData = [];
   
+  // Process all files
   for (const path in posts) {
     const post = await posts[path]();
-    const url = path.replace('../content', '').replace('.md', '');
+    // Remove both .md and .mdx extensions
+    const url = path.replace('../content', '').replace(/\.(md|mdx)$/, '');
     
     searchData.push({
       title: post.frontmatter.title || 'Untitled',
