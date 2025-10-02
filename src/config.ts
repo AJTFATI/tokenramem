@@ -30,9 +30,9 @@ export const config: SiteConfig = {
     instagram: "https://instagram.com/alexanderjordantaylor",
     tiktok: "https://tiktok.com/@alexanderjordantaylor",
     linkedin: "https://linkedin.com/in/alexanderjordantaylor",
-    email: "tayloralexanderjordan@gmail.com"
+    email: "alex@alexanderjtaylor.com"
   },
-  siteUrl: "https://volks-typo.example.com"
+  siteUrl: "https://alexanderjtaylor.com"
 };
 
 // Export constants for SEO component
