@@ -16,19 +16,16 @@ try {
   sortedPosts = [];
 }
 ---
-
-<Layout title="Headlines, Hootsuite, Hoops. description= The digital diary of Alexander J. Taylor." showSidebar={false}>
+<Layout title="Headlines, Hootsuite, Hoops." description="The digital diary of Alexander J. Taylor." showSidebar={false}>
   <div class="landing-page">
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">
-          <h1>“People don't realize how your whole life can be changed by one book.” </h1>
+        <h1 class="hero-title">“People don't realize how your whole life can be changed by one book.”</h1>
         <p class="hero-subtitle"> - Malcolm X.</p>
-        <p class="hero-description">
+        <div class="hero-description">
           <h3>I'm Alexander,</h3>
           <p>an early career professional<br> with a passion for storytelling and digital media.</p>
-        </p>
+        </div>
         <hr class="hero-rule" />
         <div class="hero-actions">
           <a href={`${import.meta.env.BASE_URL}blog`} class="btn btn-primary">My Work</a>
@@ -37,7 +34,7 @@ try {
       </div>
     </section>
 
-    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
     <section class="demo-section" id="demo">
       <div class="container">
         <h2 class="section-title">Recent Posts</h2>
