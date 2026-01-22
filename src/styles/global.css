@@ -21,11 +21,11 @@
   --color-border: #333333;
   --color-accent: var(--color-accent-red);
   
-  /* Typography */
-  --font-heading-primary: 'Oswald', sans-serif;
-  --font-heading-secondary: 'Roboto Condensed', sans-serif;
-  --font-body: 'Domine', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  /* Typography */  
+  --font-heading-primary: 'Abril Fatface', sans-serif;
+  --font-heading-secondary: 'Abril Fatface', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  --font-mono: 'Lato', monospace;
   
   /* Layout */
   --grid-unit: 8px;
