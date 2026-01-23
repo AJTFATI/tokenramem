@@ -24,8 +24,8 @@
   /* Typography */  
   --font-heading-primary: 'Abril Fatface', sans-serif;
   --font-heading-secondary: 'Abril Fatface', sans-serif;
-  --font-body: 'Domine', sans-serif;
-  --font-mono: 'Domine', monospace;
+  --font-body: 'Spectral ', sans-serif;
+  --font-mono: 'Spectral ', monospace;
   
   /* Layout */
   --grid-unit: 8px;
