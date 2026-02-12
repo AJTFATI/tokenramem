@@ -1,5 +1,5 @@
 ---
-<head/>
+
 import Layout from '../components/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -9,7 +9,7 @@ const sortedPosts = allPosts
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 <link rel="canonical" href="https://alexanderjtaylor.com/blog/">
-</head>
+
 <Layout title="Blog | Alexander J. Taylor" description="All blog posts from Alexander J. Taylor">
   <div class="blog-page">
     <header class="blog-header">
