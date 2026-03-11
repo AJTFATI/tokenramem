@@ -24,7 +24,7 @@ export const config: SiteConfig = {
     name: "Alexander J. Taylor",
     bio: "Creative. Poutine Enthusiast.",
 
-    avatar: "/Users/alexanderj.taylor/DAHLDAHL/tokenramem/src/content/pics/PFP-website.jpg"
+    avatar: "/Users/alexanderj.taylor/DAHLDAHL/tokenramem/src/content/blog/pics/peanuthead.jpeg"
   },
   social: {
     instagram: "https://instagram.com/alexanderjordantaylor",
