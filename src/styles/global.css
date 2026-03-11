@@ -2,6 +2,8 @@
 
 /* Color Variables */
 :root {
+  --content-padding: clamp(1rem, 5vw, calc(var(--grid-unit) *3));
+
   /* Monotone Palette - Force Dark Mode */
   --color-dark-blue: #00487c;
   --color-light-gray: #f5f5f5;
@@ -37,14 +39,14 @@
 /* Smooth theme transitions */
 html {
   transition: background-color 0.3s ease;
+  overflow-x: hidden; /* ← add this */
 }
 
-body,
-a,
-h1, h2, h3, h4, h5, h6,
-p, span, div,
-button, input {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+body {
+  overflow-x: hidden; /* ← add this */
+  min-height: 100vh;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* Reset and Base Styles */
