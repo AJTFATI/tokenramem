@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "cover": "https://covers.openlibrary.org/b/isbn/0735211299-M.jpg",
+    "status": "read"
+  },
+  {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "cover": "https://covers.openlibrary.org/b/isbn/1455586692-M.jpg",
+    "status": "reading"
+  },
+  {
+    "title": "A Little Bit Of Hatred",
+    "author": "Joe Abercrombie",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780316187169-M.jpg",
+    "status": "read"
+  }
+]

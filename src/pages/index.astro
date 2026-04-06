@@ -2,6 +2,8 @@
 import Layout from '../components/Layout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import books from '../data/books.json';
+---
 
 // Get all blog posts using Astro's content collections with error handling
 let sortedPosts: CollectionEntry<'blog'>[] = [];
@@ -89,7 +91,23 @@ div {text-align: center;}
         </div>
       </div>
     </section>
+<section class="bookshelf-section">
+  <div class="container">
+    <h2 class="section-title">Bookshelf</h2>
+    <p class="bookshelf-description">
+      A look into what I’m reading and learning.
+    </p>
 
+    <a href="/bookshelf" class="bookshelf-link">
+      <div class="bookshelf-preview-row">
+        {books.slice(0, 5).map(book => (
+          <div class="book-spine">{book.title}</div>
+        ))}
+      </div>
+      <span class="bookshelf-cta">View full library →</span>
+    </a>
+  </div>
+</section>
     <!-- Features Section -->
 
 
