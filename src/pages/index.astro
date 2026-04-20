@@ -2,7 +2,6 @@
 import Layout from '../components/Layout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { Fragment } from 'astro/components';
 
 // Get all blog posts using Astro's content collections with error handling
 let sortedPosts: CollectionEntry<"blog">[] = [];
@@ -51,7 +50,7 @@ div {text-align: center;}
         </p>
 
         {sortedPosts.length > 0 && (
-          <Fragment>
+          <div class="demo-posts">
             <div class="demo-posts">
               {sortedPosts.map(post => (
                 <article class="demo-post-card">
@@ -81,7 +80,7 @@ div {text-align: center;}
                 </article>
               ))}
             </div>
-          </Fragment>
+          </div>
         )}
 
         <div class="demo-actions">
