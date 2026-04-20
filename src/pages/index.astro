@@ -3,11 +3,10 @@ import Layout from '../components/Layout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { Fragment } from 'astro/components';
-import books from '../data/books.json';
 ---
 
 // Get all blog posts using Astro's content collections with error handling
-let sortedPosts: CollectionEntry<'blog'>[] = [];
+let sortedPosts: CollectionEntry<"blog">[] = [];
 try {
   const allPosts = await getCollection('blog');
   sortedPosts = allPosts
